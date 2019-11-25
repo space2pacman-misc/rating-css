@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Rating CSS",
+	"description": "Rating CSS properties",
+	"version": "1.0.0",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [{
+        "matches": ["*://*/*"],
+        "all_frames": true,
+        "js": ["js/scanstyle.js"]
+    }],
+	"permissions": [
+    	"activeTab",
+    	 "storage",
+	    "tabs",
+	    "<all_urls>"
+	]
+}
